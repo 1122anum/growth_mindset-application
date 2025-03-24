@@ -40,7 +40,7 @@ if st.button("available book"):
     st.success(books)
 
 
-# search for available book's
+# user input for available book's
 title=st.text_input("Enter the book title >> ")
 st.text_input("Enter the author >> ")
 st.number_input("Enter the publication year>> ")
@@ -61,6 +61,8 @@ book2 = {
      "genre" : "Dystopian",
         
     }
+
+# function for search books
 def show_book(book1,book2):
    if choice == "the Great Gatsby":
     return(book1)
@@ -71,8 +73,9 @@ def show_book(book1,book2):
    if st.button("available book's"):
               show_book = (book1 , book2)
               st.success(f"open book's succsessfully{choice}")
-              
+ 
 
+#  button for search book
 if st.button("search"):
    if title == "the Great Gatsby":
       result = book1
@@ -81,6 +84,8 @@ if st.button("search"):
    else:
       result = "book not found"
    st.write(f"matching book: /n{result} - {read}")
+
+
 
 
             
